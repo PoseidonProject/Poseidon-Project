@@ -1,0 +1,169 @@
+/*  Poseidon - Open Source Project Management
+    Copyright (C) 2011  The Poseidon Project (http://www.poseidonproject.org/)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+/* GENERAL */
+h1, p, body, html {
+	margin:0;
+	padding:0;
+}
+
+a:link {
+	color: #999;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #999;
+}
+a:hover {
+	text-decoration: none;
+	color: #999;
+}
+a:active {
+	text-decoration: none;
+	color: #999;
+}
+
+/* General H1 Style */
+h1 {
+	text-align: left;
+	color: #FFF;
+	font-size: 30px;
+	margin-right: 700px;
+	line-height: 179px;
+	font-style: normal;
+	font-weight: 600;
+}
+/* General H2 Style */
+h2 {
+	color: #999999;
+	font-size: 20px;
+        line-height: 1.2;
+        font-style: normal;
+        font-weight: 600;
+}
+
+/* General H6 Style */
+h6 {
+	text-align: right;
+	color: #FFF;
+	margin-top: 80px;
+	margin-right: 100px;
+}
+/* VISUAL STYLES */
+body {
+	background:#fff;
+	font:12px 'Nobile', arial, serif;
+	color:#000;
+        line-height: 1.2;
+        font-style: normal;
+        font-weight: 400;
+	}
+
+/* HEADER */	
+#headerbg {
+	background:#265082;
+	text-align:left;
+	padding:20px;
+	height:179px; 
+	}
+
+/* CENTER CONTENT */	
+#container {
+	position:relative;
+	margin:0 auto;
+	width:800px;
+	}
+
+/* FOOTER */
+#footer {
+	background:#265082;
+	padding:10px;
+	text-align:right;
+	height:179px;
+	color:#FFFFFF;
+	}
+
+/* CONTENT SYTLES */	
+.left {
+	float:left;
+	width:400px;
+	}
+
+.right {
+	float:left;
+	width:400px;
+	clear:right;
+	}
+
+.left p, .right p {
+	padding:10px;
+	}
+
+.clear {clear:both;}
+
+/* Textbox Styling */
+.textboxHolder
+{
+	width: 385px;
+	height: 33px;
+	background: url(images/textbox_bg.png) no-repeat;
+	float: left;
+}
+
+.textInput
+{
+	width: 383px;
+	height: 31px;
+	background: none;
+	border: none;
+	color: #000000;
+	margin-top: 1px;
+	margin-left: 5px;
+	font-size: 18px;
+	}
+
+/* Menu */
+
+#navmenu ul {
+	color: #FFFFFF;
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none; 
+	list-style-image: none;
+	font-size: 20px;
+	line-height: 179px;
+	text-align: right;
+	}
+#navmenu li {
+	display: inline;
+	}
+#navmenu a {
+	text-decoration:none;
+	color: #FFFFFF; 
+	}
+#navmenu a:hover {
+	color: #FFFFFF; 
+	}
+	
+#navmenu a:visited {
+	color: #FFFFFF; 
+	}
+#navmenu ul li a {
+	text-decoration:none;  
+	margin: 4px;
+	padding: 5px 10px 5px 0px; 
+	}
