@@ -26,7 +26,7 @@
 		<!--- Poseidon Container -->
 		<table width="100%">
 			<tr>
-				<td background="blue">Poseidon</td>
+				<td bgcolor="blue">Poseidon</td>
 			</tr>
 		</table>
 	</body>
