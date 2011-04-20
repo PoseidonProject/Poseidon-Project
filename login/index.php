@@ -21,13 +21,40 @@
 <html>
 	<head>
 		<title>Poseidon - Login</title>
+		<link type="text/css" rel="stylesheet" href="../style/general.css">
+		<link type="text/css" rel="stylesheet" href="../style/login.css">
+		<link href='http://fonts.googleapis.com/css?family=Nobile:regular,bold' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+		<!-- Header -->
+		<div id="header">
+			<h1>Poseidon</h1>
+		<!-- End Header Section --->
+		</div> 
+		
 		<!--- Poseidon Container -->
-		<table width="100%">
-			<tr>
-				<td bgcolor="blue">Poseidon</td>
-			</tr>
-		</table>
+		<div id="container">
+			
+			<div class="leftcol">
+				<h2>Login:</h2>
+			</div>
+			
+			<div class="rightcol">
+				<ol>
+					<li>Reset Password</li>
+					<li>Send Password Reminder</li>
+				</ol>
+			</div>
+		
+		<!-- End Poseidon Container -->
+		</div>
+		
+		<div class="spacer"></div>
+		
+		<!--- Footer -->
+		<div id="footer">
+			<h5>Powered by <a href="http://www.poseidonproject.org/" target="_blank">Poseidon Open Source Project Management</a></h5>
+		<!-- End Footer Section -->
+		</div>
 	</body>
 </html>

@@ -2,5 +2,30 @@ Poseidon Project - Open Source Project Management
 -------------------------------------------------
 EXPERIMENTAL BRANCH
 -------------------------------------------------
-
 Version: A01
+-------------------------------------------------
+
+It is not recommended that you run code from this
+branch on production servers due to the possibility
+of security flaws, general operation bugs, and the
+likelyhood that debug code is still present in the
+application.
+
+It is also possible that security measures used
+by stable releases of Poseidon have been disabled
+in some experimental builds for testing purposes.
+
+All experimental branch builds also include a
+directory not present in stable and production
+builds: 'debug'. 
+
+This directory contains functions that allow 
+the testing of new features with ease. However,
+these testing functions are not guaranteed to be
+protected or secured in any way.
+
+For the reasons stated above, we insist that for 
+production servers and distribution you switch to
+the master branch.
+
+Thankyou.
