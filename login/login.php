@@ -25,12 +25,12 @@ $username = mysql_real_escape_string($_POST['username'],$SqlConnection);
 $password = mysql_real_escape_string($_POST['password'],$SqlConnection);
 
 // [DEBUG]:
-/* if(strlen($username) >= 0)
+ if($username == ""&& $password == "")
 {
 // Get values from the URL for debugging purposes [DEBUG]
 $username = mysql_real_escape_string($_GET['user'],$SqlConnection);
 $password = mysql_real_escape_string($_GET['pass'],$SqlConnection);
-} */
+}
 
 // Get the user's unique salt:
 $SaltQuery = "SELECT salt FROM users WHERE username='".$username."';";
