@@ -21,7 +21,7 @@
 	$host = "localhost";
 	$database = "hashdevlabs_poseidon";
 	$usr = "poseidon";
-	$pwd = "Ath3nA";
+	$pwd = "******";
 	
 	$SqlConnection = mysql_connect($host,$usr,$pwd);
 	
