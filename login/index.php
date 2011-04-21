@@ -70,6 +70,6 @@
 </div>
 	<!--CLEAR FOOTER TO PREVENT BUNCHING-->
 	<div class="clear"></div>
-<div id="footer"><h6>Powered By Poseidon Open Source Project Management</h6></div>
+<div id="footer"><h4>Powered By Poseidon Open Source Project Management</h4></div>
 	</body> 
 </html> 
