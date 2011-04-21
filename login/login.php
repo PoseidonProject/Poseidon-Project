@@ -84,5 +84,9 @@ if(mysql_num_rows($ExecuteLogin) == 1)
 		echo('User Email Address: '.$dbUserEmail."<br />"); // [DEBUG]
 	}
 }
+else
+{
+	echo('<b>Login Failed. Please check your credentials.</b>');			
+}
 
 ?>
