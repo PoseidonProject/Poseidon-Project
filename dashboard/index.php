@@ -14,16 +14,16 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-    
 ?>
 
 <?php
-	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
-	
-	$SqlConnection = mysql_connect($host,$usr,$pwd);
-	
-	mysql_select_db('db-name',$SqlConnection);
+// Start Session
+session_start();
+
+// Is a valid user currently logged in? 
+include('../login/loginstatus.php');
+
+echo('<p>User Logged In!</p>');
+echo('<p><a href="http://'.$setting_url.'/login/logout.php">Logout</a></p>');
+
 ?>

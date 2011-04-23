@@ -19,6 +19,18 @@
 ?>
 
 <?php
+
+/* Encrypts some sample data using a salt and data provided by get variables in the URL.
+ * Variables included by the Poseidon Project:
+ * 
+ * salt
+ * data
+ * 
+ * example usage:
+ * http://path-to-your-poseidon-install.tld/debug/test-encryption.php?salt=1234abcd&data=example
+ * 
+ */
+ 
 	if($_GET['salt'] != "" &&  $_GET['data'] != "")
 	{
 		$salt = $_GET['salt'];

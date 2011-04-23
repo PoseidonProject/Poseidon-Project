@@ -14,16 +14,21 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-    
 ?>
 
 <?php
-	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
-	
-	$SqlConnection = mysql_connect($host,$usr,$pwd);
-	
-	mysql_select_db('db-name',$SqlConnection);
+// Start Session
+session_start();
+
+// Include Settings
+include('../inc/configuration.settings.php');
+
+// Declare user logged in as false:
+$_SESSION['auth'] = 'false';
+
+// Destroy the session:
+session_destroy();
+
+// Redirect to login:
+header('location: http://'.$setting_url.'/login');
 ?>

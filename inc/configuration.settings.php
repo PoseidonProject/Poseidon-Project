@@ -14,16 +14,12 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-    
 ?>
 
-<?php
-	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
-	
-	$SqlConnection = mysql_connect($host,$usr,$pwd);
-	
-	mysql_select_db('db-name',$SqlConnection);
+<?
+/* Settings File */
+
+// Where is Poseidon installed?
+$setting_url = "poseidon-domain-etc.tld/directory-if-applicable"; // Don't include the http:// part here. Just the (sub)domain and any applicable directories. No trailing slash at the end.
+
 ?>

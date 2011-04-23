@@ -14,16 +14,17 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-    
 ?>
 
 <?php
-	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
-	
-	$SqlConnection = mysql_connect($host,$usr,$pwd);
-	
-	mysql_select_db('db-name',$SqlConnection);
+
+// Include Settings File:
+include('../inc/configuration.settings.php');
+
+// Print Settings:
+echo('<h3><b>Poseidon Configuration Printout:</b></h3><br />');
+
+// Print URL:
+echo('<b>Installation URL:</b> '.$setting_url.'<br />');
+
 ?>

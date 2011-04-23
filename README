@@ -2,8 +2,56 @@ Poseidon Project - Open Source Project Management
 -------------------------------------------------
 EXPERIMENTAL BRANCH
 -------------------------------------------------
-Version: A02
+Version: A03
 -------------------------------------------------
+
+Changelog:
+
+AO3:
+
+Alpha Release 03 features a number of significant 
+and fundamental features. A login system has been 
+implemented, complete with logout, login page, and 
+checks to see if a user is logged in. 
+
+The first incarnation of the dashboard has arrived. 
+This will be the first page the user visits when they 
+login. Currently the dashboard features a minimalistic 
+design. Confirming the user is logged in, and providing a 
+logout button. Eventually this page will give an overview
+of projects and due tasks. A favicon has also been added.
+
+Several new debug functions have been introduced:
+
+ - Test Session
+ - Test Settings
+ - Test Encryption
+ - Test Hash
+ 
+The test session functions displays session variables,
+should they be stored. The settings test displays settings
+from the Poseidon configuration file. Test encryption encrypts
+samplee data from get variables in the URL. Test hash generates
+a random 56 character salt.
+
+New bugfixes have been introduced. Mainly minor fixes throughout
+the code, and introduction of missing 'session_start()' functions.
+
+This release still release heavily on debugged code, as seen throughout
+the project. Currently there is no database dump available. This will be
+included in the next alpha release.
+---------------------------------------------------------------------------
+
+All configuration values need to be manually entered in the following files:
+
+ - inc/database.settings.php
+ - inc/configuration.settings.php
+
+Currently no database dump is available.
+
+---------------------------------------------------------------------------
+
+Please report any bugs you find in the Poseidon code.
 
 It is not recommended that you run code from this
 branch on production servers due to the possibility

@@ -14,16 +14,22 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-    
 ?>
 
 <?php
-	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
-	
-	$SqlConnection = mysql_connect($host,$usr,$pwd);
-	
-	mysql_select_db('db-name',$SqlConnection);
+// Start Session
+session_start();
+
+// Include Settings
+include('inc/configuration.settings.php');
+
+// Is A Valid User Logged In?
+if(isset($_SESSION['auth']) && $_SESSION['auth'] == 'true')
+{
+	header('location: http://'.$setting_url.'/dashboard');
+}
+else
+{
+	header('location: http://'.$setting_url.'/login');	
+}
 ?>

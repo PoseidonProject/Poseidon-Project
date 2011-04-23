@@ -17,6 +17,9 @@
 ?>
 
 <?php
+// Start Session So We Can Use Session Values
+session_start();
+
 // Include SQL Config
 include('../inc/database.settings.php');
 
@@ -28,12 +31,12 @@ $password = mysql_real_escape_string($_POST['password'],$SqlConnection);
  if($username == ""&& $password == "")
 {
 // Get values from the URL for debugging purposes [DEBUG]
-$username = mysql_real_escape_string($_GET['user'],$SqlConnection);
-$password = mysql_real_escape_string($_GET['pass'],$SqlConnection);
+$username = mysql_real_escape_string($_GET['user'],$SqlConnection); // [DEBUG]
+$password = mysql_real_escape_string($_GET['pass'],$SqlConnection); // [DEBUG]
 }
 
 // Get the user's unique salt:
-$SaltQuery = "SELECT salt FROM users WHERE username='".$username."';";
+$SaltQuery = "SELECT salt FROM poseidon_users WHERE username='".$username."';";
 echo("<b>Query: </b>".$SaltQuery."<br />"); // [DEBUG]
 
 // Execute Query
@@ -54,7 +57,7 @@ echo('<br>'); // [DEBUG]
 echo('<br>'); // [DEBUG]
 
 // Test Login
-$LoginQuery = "SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."';";
+$LoginQuery = "SELECT * FROM poseidon_users WHERE username = '".$username."' AND password = '".$password."';";
 echo('<br><b>Login Query: </b>'. $LoginQuery); // [DEBUG]
 
 echo('<br>'); // [DEBUG]
@@ -80,9 +83,27 @@ if(mysql_num_rows($ExecuteLogin) == 1)
 		$DbUserID = $rows['id'];
 		echo('User ID: '.$DbUserID."<br />"); // [DEBUG]
 		
-		$dbUserEmail = $rows['email'];
-		echo('User Email Address: '.$dbUserEmail."<br />"); // [DEBUG]
+		$DbUserEmail = $rows['email'];
+		echo('User Email Address: '.$DbUserEmail."<br />"); // [DEBUG]
 	}
+	
+	// Get The company associated with the user's company ID:
+	$GetCompanyNameQuery = "Select name FROM poseidon_companies WHERE id = '".$DbCompanyID."';";
+	$GetCompanyNameResult = mysql_query($GetCompanyNameQuery,$SqlConnection);
+	
+	while($rows = mysql_fetch_array($GetCompanyNameResult))
+	{
+		$UsersCompanyName = $rows['name'];	
+		echo('Company Name: '.$UsersCompanyName."<br />"); // [DEBUG]
+	}
+	
+	$_SESSION['auth'] = 'true';
+	$_SESSION['username'] = $DbUser;
+	$_SESSION['displayname'] = $DbDisplayName;
+	$_SESSION['email'] = $DbUserEmail;
+	$_SESSION['uid'] = $DbUserID;
+	$_SESSION['companyid'] = $DbCompanyID;
+	$_SESSION['company'] = $UsersCompanyName;
 }
 else
 {

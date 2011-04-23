@@ -18,38 +18,36 @@
     
 <?php
 
-    // start with a blank password
+    // start with a blank salt
     $salt = "";
-
-    // define possible characters - any character in this string can be
-    // picked for use in the password, so if you want to put vowels back in
-    // or add special characters such as exclamation marks, this is where
-    // you should do it
+	
+	// These are the characters available for our salt:
     $chars = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!£$%^&()@";
 
-    // we refer to the length of $possible a few times, so let's grab it now
+    // This is the length of all our possible characters:
     $maxlength = strlen($chars);
-	$length = 56;
+	$length = 56; // This is what the final length will be
   
-    // check for length overflow and truncate if necessary
+    // Decrease length if necessary
     if ($length > $maxlength) {
       $length = $maxlength;
     }
 	
-    // set up a counter for how many characters are in the password so far
+    // set up a counter for how many characters are in the salt so far
     $i = 0; 
     
-    // add random characters to $password until $length is reached
+    // add random characters to salt until the maximum length is reached
     while ($i < $length) { 
 
-      // pick a random character from the possible ones
+      // pick a random character:
       $char = substr($chars, mt_rand(0, $maxlength-1), 1);
       
-      // add it onto the end of whatever we've already got...
+      // add it onto the end of our salt:
         $salt .= $char;
-        // ... and increase the counter by one
+        // ... Increase the counter by one:
         $i++;
       }
 	
+	// Echo the statement onto the page.
 	echo(hash('sha512',$salt,false));
 ?>
