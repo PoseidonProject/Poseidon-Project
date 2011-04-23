@@ -20,6 +20,6 @@
 /* Settings File */
 
 // Where is Poseidon installed?
-$setting_url = "poseidon-domain-etc.tld/directory-if-applicable"; // Don't include the http:// part here. Just the (sub)domain and any applicable directories. No trailing slash at the end.
+$setting_url = "labs.hashdevelopment.com/develop/poseidon"; // Don't include the http:// part here. Just the (sub)domain and any applicable directories. No trailing slash at the end.
 
 ?>

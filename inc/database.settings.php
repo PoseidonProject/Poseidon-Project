@@ -19,11 +19,11 @@
 
 <?php
 	$host = "localhost";
-	$database = "db-name";
-	$usr = "db-user";
-	$pwd = "db-password";
+	$database = "hashdevlabs_poseidon";
+	$usr = "poseidon";
+	$pwd = "Ath3nA";
 	
 	$SqlConnection = mysql_connect($host,$usr,$pwd);
 	
-	mysql_select_db('db-name',$SqlConnection);
+	mysql_select_db('hashdevlabs_poseidon',$SqlConnection);
 ?>
