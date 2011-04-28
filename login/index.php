@@ -91,17 +91,13 @@ if(isset($_SESSION['auth']) && $_SESSION['auth'] == true)
 	</form> 
 	</p>
 <!-- END LOGIN FORM -->
-	<br /><br />
+<br>
+<br>
 </div>
-
 <div class="right">
-	<br /><br />
-	&nbsp; <!-- Right Column -->
 </div>
-
 </div>
-	<!--CLEAR FOOTER TO PREVENT BUNCHING-->
-	<div class="clear"></div>
-<div id="footer"><h4>Powered By Poseidon Open Source Project Management</h4></div>
-	</body> 
+<div id="footer"><h4>Powered By Poseidon Open Source Project Management</h4>
+	&nbsp; <br>
+	</body>
 </html> 

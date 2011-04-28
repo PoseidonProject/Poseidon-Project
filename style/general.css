@@ -14,6 +14,12 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 
+/* OPERA CSS FIX*/
+body:before {
+	content: "";
+	float: left;
+	width: 0;
+}
 /* GENERAL */
 h1, p, body, html {
 	margin:0;
@@ -86,6 +92,7 @@ body {
 	position:relative;
 	margin:0 auto;
 	width:800px;
+	min-height: 100%;
 	}
 
 /* FOOTER */
@@ -95,12 +102,17 @@ body {
 	text-align:right;
 	height:179px;
 	color:#FFFFFF;
+	position: relative;
+	margin-top: -179px;
+	clear: both;
 	}
 
 /* CONTENT SYTLES */	
 .left {
 	float:left;
 	width:400px;
+	overflow: auto;
+	padding-bottom: 179px;
 	}
 
 .right {
@@ -112,8 +124,6 @@ body {
 .left p, .right p {
 	padding:10px;
 	}
-
-.clear {clear:both;}
 
 /* Textbox Styling */
 .textboxHolder
