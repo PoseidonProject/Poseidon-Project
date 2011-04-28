@@ -1,4 +1,5 @@
-/*  Poseidon - Open Source Project Management
+/*  
+	Poseidon - Open Source Project Management
     Copyright (C) 2011  The Poseidon Project (http://www.poseidonproject.org/)
 
     This program is free software: you can redistribute it and/or modify
@@ -12,35 +13,60 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+*/
 
-/* OPERA CSS FIX*/
-body:before {
-	content: "";
-	float: left;
-	width: 0;
-}
-/* GENERAL */
-h1, p, body, html {
+/* GENERAL FORMATTING */
+* {
 	margin:0;
-	padding:0;
+	padding:0
 }
 
-a:link {
-	color: #999;
-	text-decoration: none;
+html, body {
+	height:100%;
+	text-align:center;
+	font:12px 'Nobile', arial, serif;
+	line-height: 1.2;
+    font-style: normal;
+    font-weight: 400;
 }
-a:visited {
-	text-decoration: none;
-	color: #999;
+
+
+
+#outer {
+	width:auto;
+	background:#fff;
+	margin:auto;
+	min-height:100%;
+	margin-top:-179px;/* NEGATIVE FOOTER HEIGHT */
+	text-align:left;
 }
-a:hover {
-	text-decoration: none;
-	color: #999;
+
+* html #outer {
+	height:100%
 }
-a:active {
-	text-decoration: none;
-	color: #999;
+
+/* FONT FORMATTING */
+h1, h2, p {
+	padding:0 10px;
+}
+
+pagetitle {
+	text-align: left;
+	color: #FFF;
+	font-size: 30px;
+	margin-right: 700px;
+	line-height: 179px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+footertext {
+	text-align: right;
+	color: #FFF;
+	margin-top: 80px;
+	margin-right: 100px;
+	vertical-align: middle
 }
 
 /* General H1 Style */
@@ -62,92 +88,66 @@ h2 {
         font-weight: 600;
 }
 
-/* General H4 Style */
-h4 {
-	text-align: right;
-	color: #FFF;
-	margin-top: 80px;
-	margin-right: 100px;
-}
-/* VISUAL STYLES */
-body {
-	background:#fff;
-	font:12px 'Nobile', arial, serif;
-	color:#000;
-        line-height: 1.2;
-        font-style: normal;
-        font-weight: 400;
-	}
-
-/* HEADER */	
-#headerbg {
+/* HEADER */
+#header {
 	background:#265082;
-	text-align:left;
+	border-top:179px solid #fff;
+	height:179px;
 	padding:20px;
-	height:179px; 
-	}
+}
 
-/* CENTER CONTENT */	
+/* FOOTER */
+#footer {
+	text-align:right;
+	vertical-align:middle;
+	background:#265082;
+	width:auto;
+	margin:auto;
+	height:179px;/* FOOTER HEIGHT */
+	clear:both;
+}
+
+/* LEFT COLUMN */
+#left {
+	float:left;
+	width:400px;
+}
+
+/* RIGHT COLUMN */
+#right {
+	float:left;
+	width:400px;
+	clear:right;
+}
+	
+/* CONTAINER */
 #container {
 	position:relative;
 	margin:0 auto;
 	width:800px;
-	min-height: 100%;
-	}
-
-/* FOOTER */
-#footer {
-	background:#265082;
-	padding:10px;
-	text-align:right;
-	height:179px;
-	color:#FFFFFF;
-	position: relative;
-	margin-top: -179px;
-	clear: both;
-	}
-
-/* CONTENT SYTLES */	
-.left {
-	float:left;
-	width:400px;
-	overflow: auto;
-	padding-bottom: 179px;
-	}
-
-.right {
-	float:left;
-	width:400px;
-	clear:right;
-	}
-
-.left p, .right p {
-	padding:10px;
-	}
+}
 
 /* Textbox Styling */
 .textboxHolder
 {
 	width: 385px;
 	height: 33px;
-	background: url(images/textbox_bg.png) no-repeat;
+	background: url(../images/textbox_bg.png) no-repeat;
 	float: left;
 }
 
 .textInput
 {
-	width: 383px;
+	width: 380px;
 	height: 31px;
 	background: none;
 	border: none;
 	color: #000000;
 	margin-top: 1px;
-	margin-left: 5px;
-	font-size: 18px;
-	}
-
+	margin-left: 1px;
+}
+	
 /* Menu */
-
 #navmenu ul {
 	color: #FFFFFF;
 	margin: 0; 
@@ -157,23 +157,44 @@ body {
 	font-size: 20px;
 	line-height: 179px;
 	text-align: right;
-	}
+}
+
 #navmenu li {
 	display: inline;
-	}
+}
+	
 #navmenu a {
 	text-decoration:none;
 	color: #FFFFFF; 
-	}
+}
+	
 #navmenu a:hover {
 	color: #FFFFFF; 
-	}
+}
 	
 #navmenu a:visited {
 	color: #FFFFFF; 
-	}
+}
+	
 #navmenu ul li a {
 	text-decoration:none;  
 	margin: 4px;
 	padding: 5px 10px 5px 0px; 
-	}
+}
+
+/*OPERA FIX*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
+
+/* INTERNET EXPLORER FIX */
+#outer:after {
+	clear:both;
+	display:block;
+	height:1%;
+	content:" ";
+}

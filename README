@@ -2,10 +2,17 @@ Poseidon Project - Open Source Project Management
 -------------------------------------------------
 EXPERIMENTAL BRANCH
 -------------------------------------------------
-Version: A03
+Version: A04
 -------------------------------------------------
 
 Changelog:
+
+A04:
+
+Alpha Release 04 introduces the basis of a new
+dynamic styling system. All styles are now 
+retrieved from central files in the /style directory
+of Poseidon.
 
 AO3:
 

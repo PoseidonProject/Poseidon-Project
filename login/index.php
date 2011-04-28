@@ -1,5 +1,5 @@
-<?php
-/*  Poseidon - Open Source Project Management
+<!-- 
+	Poseidon - Open Source Project Management
     Copyright (C) 2011  The Poseidon Project (http://www.poseidonproject.org/)
 
     This program is free software: you can redistribute it and/or modify
@@ -13,91 +13,90 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
-?>
-
-<?php
-// Start Session
-session_start();
-
-// Include the settings file:
-include('../inc/configuration.settings.php');
-
-// Check that there isn't a user already logged in...
-if(isset($_SESSION['auth']) && $_SESSION['auth'] == true)
-{
-	header('location: http://'.$setting_url.'/dashboard/');
-}
-?>
-
-<html> 
-	<head> 
-		<title>Login | Poseidon</title> 
-		<link type="text/css" rel="stylesheet" href="../style/general.css"> 
-		<link type="text/css" rel="stylesheet" href="../style/login.css"> 
-		<link href='http://fonts.googleapis.com/css?family=Nobile:regular,bold' rel='stylesheet' type='text/css'> 
-	</head> 
-	<body> 
-<!-- Header -->
-		<div id="headerbg">
-			<div id="container">
-				<div class="left">
-					<h1>Poseidon</h1>
-				</div>
-				<div class="right">
-                <div id="navmenu">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Account</a></li>
-				</ul>
-			</div>
-				</div>
-			</div>
-		</div>
-<!-- End Header -->
-
-<!--
-			
-			
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 -->
-<!-- CENTER CONTENT -->
-<div id="container">
+<html>
+ <?php 
+ 
+ // Include The Template Header
+ include "../style/template/headers.php"; 
+ 
+ ?>
+   
+    <body>
+<div id="outer"> 
 
-<div class="left">
-	<br /><br />
+    <!-- HEADER START -->
+	<div id="header"> 
+    
+    <div id="container">
+    
+    <div id="left">  
+    <pagetitle>Poseidon</pagetitle> 
+    </div> <!-- LEFT END -->
+    
+    <div id="right">
+    <?php 
+    
+    // Include the menu:
+    include "../style/template/menu.php"; 
+    
+    ?>
+    </div> <!-- RIGHT END -->
+	</div> <!-- CONTAINER END -->
+    </div> <!-- HEADER END -->
+    
+    
+    <!-- CONTENT START -->
+    <div id="container">
+    <div id="left">
+		<br /><br />
 	<h2>Login</h2>
-	If you already have an account, please login below
-<!-- LOGIN FORM -->
+    <br />
+	<p>If you already have an account, please login below</p>
+<!-- LOGIN FORM --> 
 	<p>	
 	<form method="post" action="login.php"> 
-	<p>
-		<strong>Username:</strong>
+	<p> 
+    <br /><br />
+		<p><strong>Username:</strong></p>
+        <br />
+        <p>
 		<div class="textboxHolder"> 
 			<input type="text" name="username" class="textInput" /> 
 		</div> 
-	</p>
-	<br /><br />
-	<p>
-		<strong>Password:</strong>
-		<div class="textboxHolder">
-			<input type="password" name="password" class="textInput" />
-		</div>
-	</p>
-	<br /><br />
-	<p>
-		<input align="right" type="image" name="submit" src="../style/images/loginbutton.png" width="90" height="30">
-	</p>
+        </p>
+	</p> 
+	<br /><br /> 
+	<p> 
+    <br /><br />
+		<p><strong>Password:</strong></p>
+        <br />
+		<div class="textboxHolder"> 
+			<input type="password" name="password" class="textInput" /> 
+		</div> 
+	</p> 
+	<br /><br /> 
+	<p> 
+    <br /><br />
+		<input align="right" type="image" name="submit" src="../style/images/loginbutton.png" width="90" height="30"> 
+   	<br /><br />
+	</p> 
 	</form> 
-	</p>
-<!-- END LOGIN FORM -->
-<br>
-<br>
-</div>
-<div class="right">
-</div>
-</div>
-<div id="footer"><h4>Powered By Poseidon Open Source Project Management</h4>
-	&nbsp; <br>
-	</body>
-</html> 
+	</p> 
+<!-- END LOGIN FORM --> 
+    </div>
+    </div>
+    
+	<!-- CONTENT END --> 
+    
+</div> 
+    
+<!-- FOOTER START -->
+<div id="footer"> 
+<br /><br /><br /><br /><br /><br />
+	<footertext>Powered By Poseidon Open Source Project Management</footertext>
+</div> 
+<!-- FOOTER END -->
+    </body>
+</html>
