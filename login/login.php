@@ -85,6 +85,9 @@ if(mysql_num_rows($ExecuteLogin) == 1)
 		
 		$DbUserEmail = $rows['email'];
 		echo('User Email Address: '.$DbUserEmail."<br />"); // [DEBUG]
+		
+		$DbUserPermission = $rows['permission'];
+		echo('User Permission Level: '.$DbUserPermission."<br />"); // [DEBUG]
 	}
 	
 	// Get The company associated with the user's company ID:
@@ -104,6 +107,7 @@ if(mysql_num_rows($ExecuteLogin) == 1)
 	$_SESSION['uid'] = $DbUserID;
 	$_SESSION['companyid'] = $DbCompanyID;
 	$_SESSION['company'] = $UsersCompanyName;
+	$_SESSION['permission'] = $DbUserPermission;
 }
 else
 {
