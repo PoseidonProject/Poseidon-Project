@@ -2,10 +2,17 @@ Poseidon Project - Open Source Project Management
 -------------------------------------------------
 EXPERIMENTAL BRANCH
 -------------------------------------------------
-Version: A04
+Version: A04.2
 -------------------------------------------------
 
 Changelog:
+
+A04.2:
+
+Added a new field to the database: permission.
+Poseidon now sets a permission session variable on
+login, and if applicable displays an admin menu
+item.
 
 A04:
 
