@@ -16,87 +16,77 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 -->
 <html>
- <?php 
- 
- // Include The Template Header
- include "../style/template/headers.php"; 
- 
- ?>
+<?php 
+	// Include The Template Header
+	include "../style/template/headers.php"; 
+?>
    
-    <body>
-<div id="outer"> 
-
-    <!-- HEADER START -->
-	<div id="header"> 
-    
-    <div id="container">
-    
-    <div id="left">  
-    <pagetitle>Poseidon</pagetitle> 
-    </div> <!-- LEFT END -->
-    
-    <div id="right">
-    <?php 
-    
-    // Include the menu:
-    include "../style/template/menu.php"; 
-    
-    ?>
-    </div> <!-- RIGHT END -->
-	</div> <!-- CONTAINER END -->
-    </div> <!-- HEADER END -->
-    
+<body>
+	<div id="outer"> 
+    	<!-- HEADER START -->
+		<div id="header"> 
+    		<div id="container">
+    			<div id="left">  
+    				<pagetitle>Poseidon</pagetitle> 
+    			</div> <!-- LEFT END -->
+    			<div id="right">
+    			<?php 
+    				// Include the menu:
+    				include "../style/template/menu.php"; 
+    			?>
+    			</div> <!-- RIGHT END -->
+			</div> <!-- CONTAINER END -->
+		</div> <!-- HEADER END -->
     
     <!-- CONTENT START -->
     <div id="container">
-    <div id="left">
-		<br /><br />
-	<h2>Login</h2>
-    <br />
-	<p>If you already have an account, please login below</p>
-<!-- LOGIN FORM --> 
-	<p>	
-	<form method="post" action="login.php"> 
-	<p> 
-    <br /><br />
-		<p><strong>Username:</strong></p>
-        <br />
-        <p>
-		<div class="textboxHolder"> 
-			<input type="text" name="username" class="textInput" /> 
-		</div> 
-        </p>
-	</p> 
-	<br /><br /> 
-	<p> 
-    <br /><br />
-		<p><strong>Password:</strong></p>
-        <br />
-		<div class="textboxHolder"> 
-			<input type="password" name="password" class="textInput" /> 
-		</div> 
-	</p> 
-	<br /><br /> 
-	<p> 
-    <br /><br />
-		<input align="right" type="image" name="submit" src="../style/images/loginbutton.png" width="90" height="30"> 
-   	<br /><br />
-	</p> 
-	</form> 
-	</p> 
+    	<div id="left">
+			<br /><br />
+			<h2>Login</h2>
+    		<br />
+			<p>If you already have an account, please login below</p>
+			<!-- LOGIN FORM --> 
+			<p>	
+				<form method="post" action="login.php"> 
+					<p> 
+    					<br /><br />
+						<p><strong>Username:</strong></p>
+        				<br />
+        				<p>
+							<div class="textboxHolder"> 
+								<input type="text" name="username" class="textInput" /> 
+							</div> 
+        				</p>
+					</p> 
+					<br /><br /> 
+					<p> 
+    					<br /><br />
+						<p><strong>Password:</strong></p>
+        				<br />
+						<div class="textboxHolder"> 
+							<input type="password" name="password" class="textInput" /> 
+						</div> 
+					</p> 
+					<br /><br /> 
+					<p> 
+    					<br /><br />
+						<input align="right" type="image" name="submit" src="../style/images/loginbutton.png" width="90" height="30"> 
+   						<br /><br />
+					</p> 
+			</form> 
+		</p> 
 <!-- END LOGIN FORM --> 
     </div>
-    </div>
+	</div>
     
 	<!-- CONTENT END --> 
-    
 </div> 
     
 <!-- FOOTER START -->
 <div id="footer"> 
-<br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br />
 	<footertext>Powered By Poseidon Open Source Project Management</footertext>
 </div> 
 <!-- FOOTER END -->
-    </body>
+</body>
 </html>
